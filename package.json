@@ -1,0 +1,40 @@
+{
+  "name": "mk_utils",
+  "version": "1.0.0",
+  "description": "Aux Utils for speed up building projects",
+
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/int1ch/mk_utils"
+  },
+  "author": "Mike Nikitin <int1ch@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "publish-lib": "npm run build && npm publish",
+    "publish-beta": "npm run build && npm publish --tag beta",
+    "publish-dryrun": "npm run build && npm publish --dry-run"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.6",
+    "jest": "^27.3.1",
+    "pg": "^8.7.1",
+    "ts-node": "^10.4.0",
+    "tsc": "^2.0.3",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "env-var": "^7.1.1",
+    "knex": "^0.95.12",
+    "stringcase": "^4.3.1",
+    "yaml": "^1.10.2"
+  }
+}
